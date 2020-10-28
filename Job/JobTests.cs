@@ -46,7 +46,20 @@ namespace TechJobsTests
         [TestMethod]
         public void TestJobNameToString()
         {
+            Employer employer = new Employer("ACME");
+            Location location = new Location("Desert");
+            PositionType positionType = new PositionType("Quality control");
+            CoreCompetency coreCompetency = new CoreCompetency("Persistence");
+            Job programmer = new Job("Programmer", employer, location, positionType, coreCompetency);
+            Assert.AreEqual(programmer.ToString(),
+                $"\nID: {programmer.Id}\nName: {programmer.Name}\nEmployer: {programmer.EmployerName}\nLocation: {programmer.EmployerLocation}\nPosition Type: {programmer.JobType}\nCore Competency: {programmer.JobCoreCompetency}\n");
+        }
 
+        [TestMethod]
+        public void TestJobDoesntExist()
+        {
+            Job emptyJob = new Job();
+            Assert.IsTrue(emptyJob.ToString() == "OOPS! This job does not seem to exist.");
         }
     }
 }

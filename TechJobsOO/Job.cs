@@ -32,7 +32,12 @@ namespace TechJobsOO
         // TODO: Generate Equals() and GetHashCode() methods.
         public override string ToString()
         {
-            return Name;
+            if (Name==null)
+            {
+                return "OOPS! This job does not seem to exist.";
+            }
+            return $"\nID: {Id}\nName: {Name}\nEmployer: {EmployerName}\nLocation: {EmployerLocation}\nPosition Type: {JobType}\nCore Competency: {JobCoreCompetency}\n";
+
         }
 
         public override bool Equals(object obj)
