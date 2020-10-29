@@ -21,6 +21,10 @@ namespace TechJobsOO
         // TODO: Add custom Equals(), GetHashCode(), and ToString() methods.
         public override string ToString()
         {
+            if(Value == "" || Value == null)
+            {
+                Value = "Data not available";
+            }
             return Value;
         }
 

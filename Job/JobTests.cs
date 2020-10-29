@@ -56,6 +56,19 @@ namespace TechJobsTests
         }
 
         [TestMethod]
+
+        public void TestFieldNotAvailable()
+        {
+            Employer employer = new Employer();
+            Location location = new Location("Desert");
+            PositionType positionType = new PositionType("Quality control");
+            CoreCompetency coreCompetency = new CoreCompetency("Persistence");
+            Job programmer = new Job("Programmer", employer, location, positionType, coreCompetency);
+            Assert.AreEqual(programmer.ToString(),
+                $"\nID: {programmer.Id}\nName: {programmer.Name}\nEmployer: Data not available\nLocation: {programmer.EmployerLocation}\nPosition Type: {programmer.JobType}\nCore Competency: {programmer.JobCoreCompetency}\n");
+        }
+
+        [TestMethod]
         public void TestJobDoesntExist()
         {
             Job emptyJob = new Job();

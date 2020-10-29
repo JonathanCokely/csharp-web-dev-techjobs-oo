@@ -13,7 +13,7 @@ namespace TechJobsOO
             nextId++;
         }
 
-        public Employer(string value) : this()
+        public Employer(string value):this()
         {
             Value = value;
         }
@@ -31,6 +31,10 @@ namespace TechJobsOO
 
         public override string ToString()
         {
+            if(Value == "" || Value == null)
+            {
+                Value = "Data not available";
+            }
             return Value;
         }
     }

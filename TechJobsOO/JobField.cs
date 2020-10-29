@@ -4,15 +4,18 @@ using System.Text;
 
 namespace TechJobsOO
 {
-    class JobField
+    public abstract class JobField
     {
-        public int Id { get; }
-        private static int nextId = 1;
         public string Value { get; set; }
 
-        public JobField()
+        public JobField(string value)
         {
+            Value = value;
+        }
 
+        public virtual string ToString()
+        {
+            return Value;
         }
 
     }

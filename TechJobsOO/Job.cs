@@ -7,6 +7,7 @@ namespace TechJobsOO
     {
         public int Id { get; }
         private static int nextId = 1;
+        public string noData = "Data not available";
 
         public string Name { get; set; }
         public Employer EmployerName { get; set; }
@@ -32,10 +33,11 @@ namespace TechJobsOO
         // TODO: Generate Equals() and GetHashCode() methods.
         public override string ToString()
         {
-            if (Name==null)
+            if (Name == null && EmployerName == null && EmployerLocation == null && JobType == null && JobCoreCompetency == null)
             {
                 return "OOPS! This job does not seem to exist.";
             }
+
             return $"\nID: {Id}\nName: {Name}\nEmployer: {EmployerName}\nLocation: {EmployerLocation}\nPosition Type: {JobType}\nCore Competency: {JobCoreCompetency}\n";
 
         }

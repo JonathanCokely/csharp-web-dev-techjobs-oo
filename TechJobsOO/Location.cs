@@ -32,6 +32,10 @@ namespace TechJobsOO
 
         public override string ToString()
         {
+            if (Value == "" || Value == null)
+            {
+                Value = "Data not available";
+            }
             return Value;
         }
     }
