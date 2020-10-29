@@ -6,6 +6,7 @@ namespace TechJobsOO
 {
     public abstract class JobField
     {
+        public int Id { get; }
         public string Value { get; set; }
 
         public JobField()
@@ -24,6 +25,11 @@ namespace TechJobsOO
                 return "Data not available";
             }
             return Value;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id, Value);
         }
     }
 }

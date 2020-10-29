@@ -23,10 +23,5 @@ namespace TechJobsOO
             return obj is Location location &&
                    Id == location.Id;
         }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
-        }
     }
 }

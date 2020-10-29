@@ -24,12 +24,5 @@ namespace TechJobsOO
             return obj is CoreCompetency competency &&
                    Id == competency.Id;
         }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
-        }
-
     }
-    
 }

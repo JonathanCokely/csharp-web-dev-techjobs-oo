@@ -22,11 +22,5 @@ namespace TechJobsOO
             return obj is Employer employer &&
                    Id == employer.Id;
         }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
-        }
-
     }
 }
