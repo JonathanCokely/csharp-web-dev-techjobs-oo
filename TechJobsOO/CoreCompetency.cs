@@ -1,11 +1,10 @@
 ﻿using System;
 namespace TechJobsOO
 {
-    public class CoreCompetency
+    public class CoreCompetency:JobField
     {
         private int Id { get; set; }
         private static int nextId = 1;
-        private string Value { get; set; }
 
         // TODO: Change the fields to auto-implemented properties.
 
@@ -31,14 +30,6 @@ namespace TechJobsOO
             return HashCode.Combine(Id);
         }
 
-        public override string ToString()
-        {
-            if (Value == "" || Value == null)
-            {
-                Value = "Data not available";
-            }
-            return Value;
-        }
     }
     
 }

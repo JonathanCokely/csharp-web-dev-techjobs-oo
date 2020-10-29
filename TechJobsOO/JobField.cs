@@ -8,15 +8,22 @@ namespace TechJobsOO
     {
         public string Value { get; set; }
 
+        public JobField()
+        {
+
+        }
         public JobField(string value)
         {
             Value = value;
         }
 
-        public virtual string ToString()
+        public override string ToString()
         {
+            if (Value == "" || Value == null)
+            {
+                return "Data not available";
+            }
             return Value;
         }
-
     }
 }
