@@ -1,20 +1,14 @@
 ﻿using System;
 namespace TechJobsOO
 {
-    public class CoreCompetency:JobField
+    public class CoreCompetency : JobField
     {
-        private int Id { get; set; }
-        private static int nextId = 1;
-
-        // TODO: Change the fields to auto-implemented properties.
-
         public CoreCompetency()
         {
-            Id = nextId;
-            nextId++;
+
         }
 
-        public CoreCompetency(string v) : this()
+        public CoreCompetency(string v)
         {
             Value = v;
         }
